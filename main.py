@@ -148,7 +148,7 @@ class Window(Frame):
             if self.wowneroRadiobuttonVar.get() == 1 or self.wowneroRadiobuttonVar.get() == 3:
                 algo = "rx/wow"
             else: 
-                also = "rx/0"
+                algo = "rx/0"
             self.p = subprocess.Popen([resource_path("xmrig.exe"), "-t", str(self.threads), 
                         hugepages, "--donate-level=1", "-a", algo, "-o", str(self.urlEntry.get()), "-u", str(self.addyEntry.get())],
                         stdout=subprocess.PIPE,
